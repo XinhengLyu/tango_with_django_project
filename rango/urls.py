@@ -1,5 +1,5 @@
-
-from django.urls import path
+from unicodedata import name
+from django.urls import URLPattern, path
 from rango import views
 
 app_name = 'rango'
