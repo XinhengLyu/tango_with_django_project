@@ -127,6 +127,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
 LOGIN_URL = 'rango:login'
 SESSION_EXPIRE_AT_BROWSER_CLOSE=False
 SESSION_COOKIE_AGE=1209600
+
+

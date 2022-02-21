@@ -59,7 +59,6 @@ def add_category(request):
 
 
 
-
 @login_required 
 def add_page(request, category_name_slug):
     try:
@@ -197,3 +196,8 @@ def visitor_cookie_handler(request):
         request.session['last_visit'] = last_visit_cookie
 
     request.session['visits'] = visits
+# Use the login_required() decorator to ensure only those logged in can access the view.
+@login_required
+def user_logout(request):
+    logout(request)
+    return redirect(reverse('rango:index'))
